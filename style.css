@@ -1,0 +1,198 @@
+header {
+  background-color: maroon;
+  color: white;
+  text-align: center;
+  padding: 5px;
+  margin: -10px -10px -10px -10px;
+}
+
+footer {
+  background-color: maroon;
+  color: white;
+  text-align: center;
+  padding: 5px;
+  margin: -10px -10px -10px -10px;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  background-color: #f4f4f4;
+  justify-content: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  background-color: dimgray;
+  text-align: left;
+  width: 600px;
+  height: auto;
+  margin-left: 400px;
+  border-radius: 15px;
+  box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.7);
+}
+
+.form-control {
+  padding-left: 5%;
+}
+
+#btn {
+  text-align: center;
+}
+
+.btn {
+  padding: 4px;
+  color: white;
+  width: 80px;
+}
+
+#btntwo {
+  color: white;
+  margin-left: 230px;
+  padding: 4px;
+  width: 80px;
+  height: 44px;
+}
+
+.submit-btn {
+  padding: 200px;
+  border-radius: 0.3rem;
+  background-color: maroon;
+  color: white;
+  font-size: 20px;
+  margin-top: 3%;
+  margin-left: 200px;
+}
+
+#add_list {
+  font-size: 20px;
+}
+
+.status {
+  height: 1rem;
+  color: #fff;
+  font-size: 0.8rem;
+  letter-spacing: 0.155rem;
+  visibility: hidden;
+}
+
+.status-red {
+  color: #fff;
+  background-color: #d50000;
+}
+
+.status-green {
+  color: #fff;
+  background-color: #25d366;
+}
+
+.search-input {
+  height: 2rem;
+  width: 14rem;
+  border-radius: 0.2rem;
+  border: 1px solid #fff;
+  text-align: left;
+  font-size: 0.9rem;
+  margin-top: 10px;
+}
+
+#pass-info {
+  padding-left: 5px;
+}
+
+.shopping-list {
+  padding: 0.1rem;
+  margin: 20px;
+  background-color: #faf0e6;
+  border-radius: 0.5rem;
+  visibility: hidden;
+}
+
+.shopping-list ul {
+  list-style: none;
+  margin: 0.3rem;
+}
+
+.h2 {
+  padding-left: 10px;
+}
+
+.shopping-list ul li {
+  margin: 0.5rem 0;
+  padding: 0.3rem;
+  background-color: #faf0e6;
+  border-radius: 0.5px 0.5px 15px rgba(0, 0, 0, 0.4);
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  border-bottom: black solid;
+}
+
+.shopping-list ul li .btn-container button:first-child {
+  width: 80px;
+  background-color: maroon;
+}
+#purchase {
+  width: 80px;
+  background-color: maroon;
+}
+#cancel {
+  width: 80px;
+  background-color: white;
+  color: black;
+}
+#del {
+  background-color: white;
+
+  color: black;
+}
+#list-btn {
+  margin-top: 50px;
+  margin-left: 600px;
+  background-color: #25d366;
+  padding: 20px;
+}
+
+::after,
+::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  user-select: none;
+}
+
+.ourItems {
+  margin-left: 5%;
+}
+
+.container2 {
+  width: 60%;
+  border-radius: 6px;
+  overflow: hidden;
+}
+.suggestions {
+  display: none;
+  background: #333;
+  margin-left: 105px;
+}
+.suggestions.show {
+  display: block;
+}
+.suggestions > div {
+  padding: 15px;
+  font-size: 20px;
+  color: #fff;
+  border-top: 1px solid #666;
+  cursor: pointer;
+}
+.suggestions > div:hover,
+.suggestions > div.selected {
+  background-color: #1e4dd4;
+}
+.emphy {
+  width: 50%;
+  margin: 40px auto;
+  text-align: center;
+  color: #fff;
+}
