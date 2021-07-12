@@ -144,7 +144,7 @@ $(document).ready(function() {
 		var name_item = $('#name_item').val();
 		var quantity_item = $('#quantity_item').val();
   //  var user_mail = $('#user_mail').val();
-
+//gggggggg
 
 		if(name_item!="" && quantity_item!=""){
 			$.ajax({
