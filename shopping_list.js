@@ -144,7 +144,7 @@ $.each($(".parag"), function (key, value) {
   Name[key] = $(".parag").eq(key).attr("Item name");
   Quantity[key] = $(".parag").eq(key).attr("Quantity");
 });
-if (email != "" && Names.length > 0) {
+if (email != "" && Name.length > 0) {
   $.ajax({
     url: "saveProducts.php",
     type: "POST",

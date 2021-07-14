@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="fontawesome/css/all.min.css" />
     <link rel="stylesheet" href="style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+
     <title>Log In</title>
     <style>
       .input{
@@ -61,7 +63,7 @@
           </div>
 
           <div id="btn">
-            <input class="submit-btn" type="submit" value="LOGIN" />
+            <input id="loginBtn" class="submit-btn" type="submit" value="LOGIN" />
           </div>
           <br />
         </div>
@@ -69,39 +71,28 @@
     </div>
     <br /><br /><br />
 
-
 <?php 
 $passwordError = "";
-
 include_once 'config.php';
-
 if(isset($_POST['email'])){
-    
     $email=$_POST['email'];
-    
     $sql=mysqli_query($conn,"select * from users where Email='$email' ");
-    
-    
     if(mysqli_num_rows($sql)==1 ){
         $password=$_POST['password'];
         while ($row=mysqli_fetch_row($sql))
         {
-
-            if($password == $row[4]){
-                header("Location: shoppingList.php");
-            }        
-            else{
-                echo $passwordError = "pass is wrong";
-            }
-        }
-        exit();
-    }
+             header("Location: shoppingList.php");
+            }}        
+            
     else{
         echo " You Have Enteired invalid Email";
         exit();
     }     
 }
 ?>
+
+
+
     <footer>
       <h5>©️ Wissal.A kmerat && Mlak Biadse</h5>
     </footer>

@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="fontawesome/css/all.min.css" />
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  
 
     <!-- jQuery library -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -123,6 +124,9 @@
         <br />
       </section>
 
+      <section class="shopping-listPre">
+        <ul id="shopping-list-itemsPre"></ul>
+      </section>
       <section class="shopping-list">
         <ul class="shopping-list-items"></ul>
       </section>
@@ -140,11 +144,9 @@ $(function() {
 <script>
 $(document).ready(function() {
 	$('#buttsave').on('click', function() {
-		$("#buttsave").attr("disabled", "disabled");
 		var name_item = $('#name_item').val();
 		var quantity_item = $('#quantity_item').val();
-  //  var user_mail = $('#user_mail').val();
-
+    var user_mail = $('#user_mail').val();
 
 		if(name_item!="" && quantity_item!=""){
 			$.ajax({
@@ -152,8 +154,8 @@ $(document).ready(function() {
 				type: "POST",
 				data: {
 					name_item: name_item,
-					quantity_item: quantity_item
-     //     user_mail: user_mail
+					quantity_item: quantity_item,
+          user_mail: user_mail
 				},
 				cache: false,
 				success: function(dataResult){
@@ -163,6 +165,8 @@ $(document).ready(function() {
 						$('#fupForm').find('input:text').val('');
 						$("#success").show();
 						$('#success').html('Data added successfully !'); 	
+
+            $("#shopping-list-itemsPre").html(dataResult);            
 
             $(function(){
              setTimeout(function() {
